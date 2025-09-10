@@ -42,10 +42,11 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center">
-        <div className="mr-4 hidden md:flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <span className="hidden font-bold sm:inline-block">
+      <div className="container flex h-16 items-center justify-center">
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center justify-center space-x-8 w-full">
+          <Link href="/" className="flex items-center space-x-2">
+            <span className="font-bold text-lg">
               Best Clubs Prague
             </span>
           </Link>
@@ -88,25 +89,23 @@ export default function Header() {
           </NavigationMenu>
         </div>
         
+        {/* Mobile Logo (Centered) */}
+        <div className="flex md:hidden items-center justify-center flex-1">
+          <Link href="/" className="font-bold text-lg">
+            Best Clubs Prague
+          </Link>
+        </div>
+
         {/* Mobile menu button */}
         <Button
           variant="outline"
           size="icon"
-          className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+          className="md:hidden px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           <Menu className="h-5 w-5" />
           <span className="sr-only">Toggle Menu</span>
         </Button>
-
-        {/* Mobile Logo */}
-        <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-          <div className="w-full flex-1 md:w-auto md:flex-none">
-            <Link href="/" className="font-bold md:hidden">
-              Best Clubs Prague
-            </Link>
-          </div>
-        </div>
       </div>
 
       {/* Mobile Navigation */}

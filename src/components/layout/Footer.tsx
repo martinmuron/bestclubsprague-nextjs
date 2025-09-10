@@ -27,7 +27,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t bg-background">
-      <div className="container py-8 md:py-12">
+      <div className="container py-6 md:py-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Logo and Description */}
           <div className="space-y-4">
@@ -91,9 +91,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <Separator className="my-6" />
+        <Separator className="my-4" />
 
-        <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+        <div className="flex flex-col items-center justify-between gap-2 md:flex-row">
           <div className="text-center text-sm text-muted-foreground md:text-left">
             © {currentYear} Best Clubs Prague. All rights reserved.
           </div>
