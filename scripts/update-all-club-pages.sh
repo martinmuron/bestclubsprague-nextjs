@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "This script would update all club pages with hero images"
+echo "Club pages to update:"
+echo "- moon-club-best-club-prague"
+echo "- 80s-club-best-clubs-prague"
+echo "- fu-club-prague-best-club-prague"
+echo "- radost-fx-prague"
+echo "- chapeau-rouge-best-club-prague"
+echo "- pop-up-bar-best-club-prague"
+echo "- steampunk-best-club-prague"
+echo "- ku-club-bar-best-clubs-prague"
+echo "- nebe-cocktail-bar-best-clubs-prague"
+echo "- la-bodeguita-del-medio"
+echo ""
+echo "Images are ready in /public/images/clubs/"

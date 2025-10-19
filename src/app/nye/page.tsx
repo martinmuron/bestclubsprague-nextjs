@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -6,9 +7,16 @@ import { Metadata } from "next";
 import { Star, MapPin, Clock, Euro, Calendar, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "New Year's Eve Prague 2025 | Best NYE Parties | Best Clubs Prague",
-  description: "Celebrate New Year's Eve 2024-2025 in Prague's best clubs and venues. Find the ultimate NYE parties, events, and celebrations in Prague's top nightlife spots.",
-  keywords: "NYE Prague 2025, New Year's Eve Prague, Prague NYE parties, New Year Prague clubs, Prague celebration 2025",
+  title: "New Year's Eve Prague 2025 | Best NYE Parties & Events | Best Clubs Prague",
+  description: "Celebrate NYE 2024-2025 in Prague's best clubs! Ultimate guide to New Year's Eve parties, VIP packages & events. Book the best NYE celebration in Prague 2025.",
+  keywords: "nye prague 2025, new year's eve prague, prague nye parties, new year prague clubs, where to celebrate nye prague, best clubs prague, prague celebration 2025, nye events prague",
+  openGraph: {
+    title: "New Year's Eve Prague 2025 - Best NYE Parties & Events",
+    description: "Ring in 2025 at Prague's most spectacular NYE celebrations. VIP packages, premium clubs & unforgettable parties.",
+    images: ["/images/blog/nye-2024.jpg"],
+    type: "website",
+    locale: "en_US",
+  },
 };
 
 export default function NYEPage() {
@@ -67,34 +75,43 @@ export default function NYEPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 py-20 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <Sparkles className="h-8 w-8 text-yellow-300" />
-              <Badge className="bg-yellow-500 text-black text-lg px-4 py-2">Special Event</Badge>
-              <Sparkles className="h-8 w-8 text-yellow-300" />
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              New Year's Eve Prague 2025
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Ring in 2025 at Prague's Most Spectacular NYE Celebrations
-            </p>
-            <p className="text-lg mb-8 opacity-80 max-w-2xl mx-auto">
-              Experience the ultimate New Year's Eve in Prague with exclusive parties, champagne toasts, 
-              and unforgettable celebrations at the city's premier nightlife venues.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-yellow-500 text-black hover:bg-yellow-400">
-                View All NYE Events
-              </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-black">
-                Book VIP Experience
-              </Button>
+      <section className="relative h-[70vh] overflow-hidden">
+        <Image
+          src="/images/blog/nye-2024.jpg"
+          alt="New Year's Eve Prague 2025"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/40" />
+        <div className="relative h-full flex items-center">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center text-white">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <Sparkles className="h-8 w-8 text-yellow-300" />
+                <Badge className="bg-yellow-500 text-black text-lg px-4 py-2">Special Event</Badge>
+                <Sparkles className="h-8 w-8 text-yellow-300" />
+              </div>
+
+              <h1 className="text-5xl md:text-7xl font-black mb-6">
+                New Year's Eve Prague 2025
+              </h1>
+              <p className="text-xl md:text-2xl mb-8">
+                Ring in 2025 at Prague's Most Spectacular NYE Celebrations
+              </p>
+              <p className="text-lg mb-8 max-w-2xl mx-auto">
+                Experience the ultimate New Year's Eve in Prague with exclusive parties, champagne toasts,
+                and unforgettable celebrations at the city's premier nightlife venues.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="bg-yellow-500 text-black hover:bg-yellow-400">
+                  View All NYE Events
+                </Button>
+                <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+                  Book VIP Experience
+                </Button>
+              </div>
             </div>
           </div>
         </div>

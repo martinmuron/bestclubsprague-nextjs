@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -38,9 +39,17 @@ export default function ChapeauRougePage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-red-800 via-red-600 to-orange-600 py-20 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+      <section className="relative h-[60vh] overflow-hidden">
+        <Image
+          src="/images/clubs/chapeau-rouge-best-club-prague-1.jpg"
+          alt="Chapeau Rouge Prague"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30" />
+        <div className="relative h-full flex items-end">
+          <div className="container mx-auto px-4 pb-12 text-white">
             <div className="flex items-center gap-2 mb-4">
               <Badge className="bg-red-700 text-white">{clubDetails.category}</Badge>
               <div className="flex items-center gap-1">
@@ -48,25 +57,13 @@ export default function ChapeauRougePage() {
                 <span className="font-semibold">{clubDetails.rating}</span>
               </div>
             </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+
+            <h1 className="text-5xl md:text-7xl font-black mb-4">
               {clubDetails.name}
             </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-90">
+            <p className="text-xl md:text-2xl font-medium">
               Prague's Legendary Nightclub in the Heart of Old Town
             </p>
-            <p className="text-lg mb-8 opacity-80 max-w-2xl">
-              {clubDetails.description}
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-red-700 text-white hover:bg-red-800">
-                Plan Your Night
-              </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-red-600">
-                View Events
-              </Button>
-            </div>
           </div>
         </div>
       </section>
@@ -114,6 +111,25 @@ export default function ChapeauRougePage() {
                         <span className="text-sm">{feature}</span>
                       </div>
                     ))}
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                    <div className="relative h-48 rounded-lg overflow-hidden">
+                      <Image
+                        src="/images/clubs/chapeau-rouge-best-club-prague-1.jpg"
+                        alt="Chapeau Rouge Interior"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative h-48 rounded-lg overflow-hidden">
+                      <Image
+                        src="/images/clubs/chapeau-rouge-best-club-prague-2.png"
+                        alt="Chapeau Rouge Atmosphere"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
                 </CardContent>
               </Card>

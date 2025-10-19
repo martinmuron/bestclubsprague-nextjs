@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -7,9 +8,9 @@ import { Metadata } from "next";
 import { Calendar, User, ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Wait… there is how many clubs in Prague? | Best Clubs Prague",
-  description: "The answer is way too many. It seems there is a club on every corner. Prague even has its own party street called Dlouha, yet most of the better clubs are not on this street.",
-  keywords: "Prague clubs, how many clubs Prague, Dlouha street Prague, Prague nightlife guide, club guide Prague",
+  title: "How Many Clubs in Prague? Ultimate Guide | Best Clubs Prague 2025",
+  description: "200+ clubs in Prague! Complete guide to Prague's nightlife. Discover the best clubs beyond Dlouha street. Quality venues vs tourist traps.",
+  keywords: "clubs prague, how many clubs prague, dlouha street clubs, prague nightlife, best clubs prague 2025, clubs in prague, prague party street",
 };
 
 export default function ClubsInPraguePage() {
@@ -62,6 +63,16 @@ export default function ClubsInPraguePage() {
       </header>
 
       <Separator className="mb-8" />
+
+      {/* Featured Image */}
+      <div className="relative h-[400px] w-full mb-8 rounded-lg overflow-hidden">
+        <Image
+          src="/images/homepage/hero-background.jpg"
+          alt="Prague Nightlife"
+          fill
+          className="object-cover"
+        />
+      </div>
 
       {/* Article Content */}
       <div className="prose prose-lg max-w-none">

@@ -10,9 +10,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Best Clubs Prague | List of Clubs in Prague 2025",
-  description: "Find the best clubs in the city of Prague in 2025. Prague is full of exciting nightlife and with our list, you will always find the best club to enjoy your night.",
-  keywords: "Prague clubs, Prague nightlife, best clubs Prague, Prague bars, nightclubs Prague, Prague entertainment",
+  title: "Best Clubs Prague 2025 | Ultimate Prague Nightlife Guide & Club List",
+  description: "Discover the best clubs in Prague 2025. Complete guide to Prague's top nightlife venues, parties & entertainment. Find where to party every night of the week in Prague.",
+  keywords: "best clubs prague, clubs prague, prague nightlife, best clubs prague 2025, where to party prague, party prague sunday, party prague wednesday, nightclubs prague",
+  openGraph: {
+    title: "Best Clubs Prague 2025 | Ultimate Nightlife Guide",
+    description: "Complete guide to Prague's best clubs, parties & nightlife venues. Updated for 2025.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Best Clubs Prague",
+  },
 };
 
 export default function RootLayout({

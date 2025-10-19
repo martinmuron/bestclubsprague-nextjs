@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
-import { MapPin } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   // Club data based on actual site content
@@ -9,14 +10,16 @@ export default function Home() {
       id: "1",
       name: "M1 LOUNGE",
       slug: "m1-lounge-best-club-prague",
+      image: "/images/clubs/m1-lounge-best-club-prague-1.jpg",
       description: "If RnB is your flavor. There is nothing better.",
       address: "Masna 705/1, 110 00 Stare Mesto",
       details: "A very popular RnB club next to the crowded Dlouha \"nightlife street\". Opened for over 13 years, it provides the best dance music in Prague. Visited by many rappers like Wiz Khalifa, Big Sean, Xzibit, Machine Gun Kelly, it really is the top RnB spot in Prague."
     },
     {
-      id: "2", 
+      id: "2",
       name: "Epic Prague",
       slug: "epic-prague",
+      image: "/images/clubs/epic-prague-1.jpg",
       description: "Epic IS the most modern club in prague.",
       address: "Revolucni 1/1003/3, 110 00 Stare Mesto Praha 1",
       details: "The most modern and newest club in Prague. An absolutely insane sound system, with over 100 square meters of LED screens and a superior lighting system. What more needs to be said?"
@@ -24,7 +27,8 @@ export default function Home() {
     {
       id: "3",
       name: "MOON CLUB",
-      slug: "moon-club-best-club-prague", 
+      slug: "moon-club-best-club-prague",
+      image: "/images/clubs/moon-club-best-club-prague-1.jpg",
       description: "Dance the night away at one of the newest clubs in Prague.",
       address: "Dlouha 709/26, 110 00 Stare Mesto",
       details: "Sip on rare cocktails that you will not find anywhere else, or dance the night away under their glass rooftop ceiling."
@@ -33,6 +37,7 @@ export default function Home() {
       id: "4",
       name: "CAFE 80s club",
       slug: "80s-club-best-clubs-prague",
+      image: "/images/clubs/80s-club-best-clubs-prague-1.jpg",
       description: "Eighties-inspired café-restaurant & music club in Prague downtown!",
       address: "V Kolkovne 909/6, 110 00 Stare Mesto",
       details: "Discover acid wash jeans, baggies, MTV, Polaroids, Walkmen, eight-track tapes, cassettes, digital watches – and a few Czechoslovak features like Pedro chewing gum, Tuzex stores, foreign currency coupons, and imported Burda and Bravo magazines – these are the images that come to mind when recalling the golden Eighties…"
@@ -41,6 +46,7 @@ export default function Home() {
       id: "5",
       name: "FU Club & LOUNGE",
       slug: "fu-club-prague-best-club-prague",
+      image: "/images/clubs/fu-club-prague-best-club-prague-1.jpg",
       description: "A new addition to Best Clubs Prague.",
       address: "Dlouha 13, Prague 1",
       details: "A new addition to Best Clubs Prague is the FU Club & Lounge, which has recently opened on the highly popular party street - Dlouha. Open daily, it never fails to bring the party."
@@ -49,6 +55,7 @@ export default function Home() {
       id: "6",
       name: "RADOST FX",
       slug: "radost-fx-prague",
+      image: "/images/clubs/radost-fx-prague-1.jpg",
       description: "Multigenre Club with genius loci since 1992",
       address: "Belehradska 120, 120 00 Praha 2",
       details: "One of the oldest clubs in Prague, just a few steps from Wenceslas Square, offers a variety of parties of different genres. From House to Techno, RnB & Hip Hop, dance music & live concerts delivered on one of the smoothest soundsystem by Funktion One. Rihanna filmed her video for Don't Stop The Music here in 2006."
@@ -57,6 +64,7 @@ export default function Home() {
       id: "7",
       name: "Chapeau rouge",
       slug: "chapeau-rouge-best-club-prague",
+      image: "/images/clubs/chapeau-rouge-best-club-prague-1.jpg",
       description: "SINCE 1919.",
       address: "Jakubska 2, 110 00 Stare Mesto",
       details: "Legendary! Chapeau Rouge was founded in 1919. Yes you read that correctly. That is absolutely ridiculous! There is a reason though why it has lasted this long. The parties, the staff, and the overall atmosphere is exceptional, outrageous, unforgettable. Everyday there are DJs, and various live concerts and performances. Did we mention there are 3 floors?"
@@ -65,9 +73,46 @@ export default function Home() {
       id: "8",
       name: "POP UP BAR",
       slug: "pop-up-bar-best-club-prague",
+      image: "/images/clubs/pop-up-bar-best-club-prague-1.jpg",
       description: "BAR that becomes a club!",
       address: "Na Príkope 390/3, 110 00 Stare Mesto",
       details: "Experience the vibrant transition of POP UP BAR, a unique spot that morphs from a cozy bar into an electrifying club. Known for its amazing atmosphere and music, it's the perfect destination for both relaxed evenings and lively nights out."
+    },
+    {
+      id: "9",
+      name: "STEAMPUNK",
+      slug: "steampunk-best-club-prague",
+      image: "/images/clubs/steampunk-best-club-prague-1.jpg",
+      description: "Themed parties till 7am with full kitchen service.",
+      address: "Veleslavinova 1098/3, 110 00 Praha 1",
+      details: "Open 7 days a week, Steampunk offers themed parties until 7am with a full kitchen serving homemade burgers, steaks and more. An unforgettable experience in the center of Prague."
+    },
+    {
+      id: "10",
+      name: "NEBE Cocktail Bar",
+      slug: "nebe-cocktail-bar-best-clubs-prague",
+      image: "/images/clubs/nebe-cocktail-bar-best-clubs-prague-1.jpg",
+      description: "Heavenly cocktails & bartending shows.",
+      address: "Kremencova 10, 110 00 Praha 1",
+      details: "A cocktail and music bar with 100+ drinks, professional bartending shows and a dance floor. Two locations near Wenceslas Square, Nebe (meaning 'Heaven') delivers both cocktails and club vibes."
+    },
+    {
+      id: "11",
+      name: "KU CLUB & BAR",
+      slug: "ku-club-bar-best-clubs-prague",
+      image: "/images/clubs/ku-club-bar-best-clubs-prague-1.webp",
+      description: "Cocktails & Shisha since 2007.",
+      address: "Jachymova 2, 110 00 Praha 1",
+      details: "17+ years of Prague nightlife excellence. Daily events, cocktail masterclasses and premium Tantum Pipes shisha in the center of Prague."
+    },
+    {
+      id: "12",
+      name: "LA BODEGUITA DEL MEDIO",
+      slug: "la-bodeguita-del-medio",
+      image: "/images/clubs/la-bodeguita-del-medio-1.jpg",
+      description: "Authentic Cuban restaurant & club.",
+      address: "Kaprova 5, 110 00 Praha 1",
+      details: "Authentic Cuban restaurant and club in Old Town. Live music, dancers, DJs, Caribbean cocktails and celebrity favorite. Experience Havana in the heart of Prague."
     }
   ];
 
@@ -77,19 +122,22 @@ export default function Home() {
       id: "1",
       title: "Where should you spend your Prague NYE 2024/2025?",
       slug: "where-should-you-spend-your-prague-nye-2024-2025",
-      url: "/post/where-should-you-spend-your-prague-nye-2024-2025"
+      url: "/post/where-should-you-spend-your-prague-nye-2024-2025",
+      image: "/images/blog/nye-2024.jpg"
     },
     {
-      id: "2", 
+      id: "2",
       title: "Halloween in Prague 2024. Where Should you Go!?",
       slug: "halloween-in-prague-where-should-you-go",
-      url: "/post/halloween-in-prague-where-should-you-go"
+      url: "/post/halloween-in-prague-where-should-you-go",
+      image: "/images/blog/halloween-2024.jpg"
     },
     {
       id: "3",
-      title: "Prague Wednesday Party - Ladies Night", 
+      title: "Prague Wednesday Party - Ladies Night",
       slug: "prague-wednesday-party-ladies-night",
-      url: "/post/prague-wednesday-party-ladies-night"
+      url: "/post/prague-wednesday-party-ladies-night",
+      image: "/images/blog/ladies-night.jpg"
     }
   ];
 
@@ -97,22 +145,35 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero Section with Video Background */}
       <section className="relative h-screen overflow-hidden">
-        {/* Video Background */}
-        <video 
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          autoPlay 
-          muted 
-          loop
-          playsInline
-        >
-          <source src="/videos/prague-nightlife.mp4" type="video/mp4" />
-          {/* Fallback background */}
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-900 to-blue-900"></div>
-        </video>
-        
+        {/* Background Video */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0">
+            <div className="relative h-full w-full">
+              <Image
+                src="/images/homepage/hero-background.jpg"
+                alt="Nightlife in Prague"
+                fill
+                priority
+                className="object-cover"
+                sizes="100vw"
+              />
+            </div>
+          </div>
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            poster="/images/homepage/hero-background.jpg"
+            className="absolute inset-0 hidden h-full w-full object-cover md:block"
+            src="/videos/hero-video.mp4"
+          />
+        </div>
+
         {/* Dark Overlay */}
-        <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
-        
+        <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-60"></div>
+
         {/* Content */}
         <div className="relative z-10 flex items-center justify-center h-full text-white">
           <div className="text-center max-w-4xl px-4">
@@ -124,12 +185,13 @@ export default function Home() {
               FUN! <span className="text-sm md:text-base lg:text-lg">UPDATED FOR 2025</span>
             </h1>
             <div className="mt-8">
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="text-white border-white hover:bg-white hover:text-black text-lg px-8 py-3"
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-transparent text-white border-white hover:bg-white hover:text-black text-lg px-8 py-3"
+                asChild
               >
-                TAKE ME TO THE LIST
+                <Link href="#club-list">TAKE ME TO THE LIST</Link>
               </Button>
             </div>
           </div>
@@ -139,15 +201,27 @@ export default function Home() {
       {/* Recent Blog Posts */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">Recent Posts</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {recentPosts.map((post) => (
-              <div key={post.id} className="bg-white p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg leading-tight font-semibold">
-                  <Link href={post.url} className="hover:text-blue-600">
-                    {post.title}
-                  </Link>
-                </h3>
-              </div>
+              <Link key={post.id} href={post.url}>
+                <Card className="overflow-hidden hover:shadow-xl transition-shadow cursor-pointer group">
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-semibold leading-tight group-hover:text-blue-600 transition-colors">
+                      {post.title}
+                    </h3>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
@@ -175,17 +249,23 @@ export default function Home() {
       </section>
 
       {/* Clubs List - Full Width 2-Column Layout */}
-      <section className="space-y-0">
+      <section id="club-list" className="space-y-0 scroll-mt-20">
         {clubs.map((club, index) => (
           <div key={club.id} className="w-full">
             {/* Normal Layout - Image Left, Content Right */}
             {index % 2 === 0 ? (
               <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
-                {/* Image/Video Side */}
-                <div className="relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-green-400 via-blue-500 to-purple-600">
-                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-                  </div>
+                {/* Image Side */}
+                <div className="relative min-h-[320px] overflow-hidden">
+                  <Image
+                    src={club.image}
+                    alt={club.name}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    priority={index <= 1}
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-20"></div>
                 </div>
                 
                 {/* Content Side */}
@@ -208,10 +288,10 @@ export default function Home() {
                       {club.details}
                     </p>
                     
-                    <Button 
-                      variant="outline" 
+                    <Button
+                      variant="outline"
                       size="lg"
-                      className="border-black text-black hover:bg-black hover:text-white px-8 py-3"
+                      className="border-black bg-white text-black hover:bg-black hover:text-white px-8 py-3"
                       asChild
                     >
                       <Link href={`/${club.slug}`}>LEARN MORE</Link>
@@ -242,22 +322,28 @@ export default function Home() {
                       {club.details}
                     </p>
                     
-                    <Button 
-                      variant="outline" 
+                    <Button
+                      variant="outline"
                       size="lg"
-                      className="border-black text-black hover:bg-black hover:text-white px-8 py-3"
+                      className="border-black bg-white text-black hover:bg-black hover:text-white px-8 py-3"
                       asChild
                     >
                       <Link href={`/${club.slug}`}>LEARN MORE</Link>
                     </Button>
                   </div>
                 </div>
-                
-                {/* Image/Video Side */}
-                <div className="relative overflow-hidden lg:order-2">
-                  <div className="absolute inset-0 bg-gradient-to-br from-green-400 via-blue-500 to-purple-600">
-                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-                  </div>
+
+                {/* Image Side */}
+                <div className="relative min-h-[320px] overflow-hidden lg:order-2">
+                  <Image
+                    src={club.image}
+                    alt={club.name}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    priority={index <= 1}
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-20"></div>
                 </div>
               </div>
             )}

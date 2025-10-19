@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -38,9 +39,17 @@ export default function EightiesClubPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 py-20 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+      <section className="relative h-[60vh] overflow-hidden">
+        <Image
+          src="/images/clubs/80s-club-best-clubs-prague-1.jpg"
+          alt="80s Club Prague"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30" />
+        <div className="relative h-full flex items-end">
+          <div className="container mx-auto px-4 pb-12 text-white">
             <div className="flex items-center gap-2 mb-4">
               <Badge className="bg-pink-500 text-white">{clubDetails.category}</Badge>
               <div className="flex items-center gap-1">
@@ -48,25 +57,13 @@ export default function EightiesClubPage() {
                 <span className="font-semibold">{clubDetails.rating}</span>
               </div>
             </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+
+            <h1 className="text-5xl md:text-7xl font-black mb-4">
               {clubDetails.name}
             </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-90">
+            <p className="text-xl md:text-2xl font-medium">
               Step Back to the Golden Era of Music & Dance
             </p>
-            <p className="text-lg mb-8 opacity-80 max-w-2xl">
-              {clubDetails.description}
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-pink-500 text-white hover:bg-pink-600">
-                Join the Party Tonight
-              </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-purple-600">
-                View Events Calendar
-              </Button>
-            </div>
           </div>
         </div>
       </section>
@@ -116,6 +113,25 @@ export default function EightiesClubPage() {
                         <span className="text-sm">{feature}</span>
                       </div>
                     ))}
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                    <div className="relative h-48 rounded-lg overflow-hidden">
+                      <Image
+                        src="/images/clubs/80s-club-best-clubs-prague-1.jpg"
+                        alt="80s Club Interior"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative h-48 rounded-lg overflow-hidden">
+                      <Image
+                        src="/images/clubs/80s-club-best-clubs-prague-2.jpg"
+                        alt="80s Club Atmosphere"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
                 </CardContent>
               </Card>

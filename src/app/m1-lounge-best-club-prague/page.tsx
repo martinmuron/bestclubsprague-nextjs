@@ -3,13 +3,21 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
 import { Star, MapPin, Clock, Phone, Euro } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "M1 Lounge Prague | Best Club Prague | Premium Nightlife Experience",
-  description: "M1 Lounge - Prague's premier nightclub with 20+ years of excellence. Experience luxury nightlife in the heart of Prague with world-class DJs and VIP service.",
-  keywords: "M1 Lounge Prague, best club Prague, Prague nightclub, VIP Prague, luxury nightlife Prague",
+  title: "M1 Lounge Prague - Best Club Prague 2025 - RnB Hip Hop Club",
+  description: "M1 Lounge: Prague's #1 RnB & Hip Hop club since 2003. Premium nightlife with world-class DJs, VIP service & luxury atmosphere. Best clubs Prague 2025.",
+  keywords: "m1 lounge prague, best club prague, rnb club prague, hip hop prague, best clubs prague 2025, clubs prague, vip nightclub prague, where to party prague",
+  openGraph: {
+    title: "M1 Lounge Prague - Best RnB Hip Hop Club 2025",
+    description: "Prague's premier RnB & Hip Hop nightclub with 20+ years of excellence. VIP service & world-class entertainment.",
+    images: ["/images/clubs/m1-lounge-best-club-prague-1.jpg"],
+    type: "website",
+    locale: "en_US",
+  },
 };
 
 export default function M1LoungePage() {
@@ -37,9 +45,18 @@ export default function M1LoungePage() {
 
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-purple-900 to-blue-900 py-20 text-white">
-        <div className="container mx-auto px-4">
+      {/* Hero Section with Image */}
+      <section className="relative h-[60vh] overflow-hidden">
+        <Image
+          src="/images/clubs/m1-lounge-best-club-prague-1.jpg"
+          alt="M1 Lounge Prague"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30" />
+        <div className="relative h-full flex items-end">
+          <div className="container mx-auto px-4 pb-12 text-white">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-2 mb-4">
               <Badge className="bg-yellow-500 text-black">{clubDetails.category}</Badge>
