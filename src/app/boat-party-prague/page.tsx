@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Music, Users, Cocktail, Sparkles } from "lucide-react";
+import { Music, Users, Wine, Sparkles } from "lucide-react";
 
 export default function BoatPartyPrague() {
   return (
@@ -57,7 +57,7 @@ export default function BoatPartyPrague() {
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="p-3 bg-blue-100 rounded-lg">
-                      <Cocktail className="h-6 w-6 text-blue-600" />
+                      <Wine className="h-6 w-6 text-blue-600" />
                     </div>
                     <div>
                       <h3 className="font-bold mb-2">Full Bars</h3>
