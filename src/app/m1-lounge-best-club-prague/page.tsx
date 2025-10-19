@@ -86,6 +86,7 @@ export default function M1LoungePage() {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* Club Information */}
