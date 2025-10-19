@@ -1,3 +1,4 @@
+import HeroVideo from "@/components/home/HeroVideo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
@@ -145,34 +146,26 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero Section with Video Background */}
       <section className="relative h-screen overflow-hidden">
-        {/* Background Video */}
+        {/* Background Media */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0">
-            <div className="relative h-full w-full">
-              <Image
-                src="/images/homepage/hero-background.jpg"
-                alt="Nightlife in Prague"
-                fill
-                priority
-                className="object-cover"
-                sizes="100vw"
-              />
-            </div>
+          <div className="absolute inset-0 md:hidden">
+            <Image
+              src="/images/homepage/hero-background.jpg"
+              alt="Nightlife in Prague"
+              fill
+              priority
+              className="object-cover"
+              sizes="100vw"
+            />
           </div>
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
+          <HeroVideo
+            className="hidden md:block"
             poster="/images/homepage/hero-background.jpg"
-            className="absolute inset-0 hidden h-full w-full object-cover md:block"
-            src="/videos/hero-video.mp4"
           />
         </div>
 
         {/* Dark Overlay */}
-        <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-60"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
 
         {/* Content */}
         <div className="relative z-10 flex items-center justify-center h-full text-white">
