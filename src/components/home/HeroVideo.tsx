@@ -75,7 +75,6 @@ export default function HeroVideo({ className, poster }: HeroVideoProps) {
       autoPlay
       loop
       muted
-      defaultMuted
       playsInline
       preload="auto"
       poster={poster}
